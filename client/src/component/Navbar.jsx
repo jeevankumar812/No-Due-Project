@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react"; // ✅ Install: npm install lucide-react
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Students", path: "/students" },
@@ -9,35 +13,72 @@ const Navbar = () => {
     { name: "About", path: "/about" },
   ];
 
-  const location = useLocation();
-
   // ✅ Hide Navbar on Faculty & About pages
   if (location.pathname === "/faculty" || location.pathname === "/about") {
     return null;
   }
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-center px-6 md:px-16 lg:px-24 
-      text-white py-6 z-50`}
-      style={{
-        background: "transparent", // ✅ No background color
-      }}
-    >
-      <div className="hidden md:flex items-center gap-6">
-        {navLinks.map((link, i) => (
-          <Link
-            key={i}
-            to={link.path}
-            className="hover:text-blue-300 transition-all"
-          >
-            {link.name}
-          </Link>
-        ))}
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
-          Login
+    <nav className="fixed top-0 left-0 w-full z-50 ">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-4 text-white">
+        
+        
+            {/* ✅ Logo Section */}
+        <div className="flex items-center gap-2">
+  <img src="/logo.png" alt="Logo" className="h-10 w-auto rounded" />
+  <span className="font-poppins text-lg tracking-wide">
+    Alva's Institute Of Engineering & Technology
+  </span>
+</div>
+
+
+
+      
+        {/* ✅ Desktop Menu */}
+        <div className="hidden md:flex gap-6">
+          {navLinks.map((link, i) => (
+            <Link
+              key={i}
+              to={link.path}
+              className={`transition-all hover:text-blue-400 ${
+                location.pathname === link.path
+                  ? "text-blue-400 border-b-2 border-blue-400"
+                  : ""
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+
+        {/* ✅ Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
+
+      {/* ✅ Mobile Dropdown */}
+      {isOpen && (
+        <div className="md:hidden bg-black/90 text-white px-6 py-4 flex flex-col gap-4">
+          {navLinks.map((link, i) => (
+            <Link
+              key={i}
+              to={link.path}
+              className={`transition-all hover:text-blue-400 ${
+                location.pathname === link.path
+                  ? "text-blue-400 border-b-2 border-blue-400"
+                  : ""
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };
