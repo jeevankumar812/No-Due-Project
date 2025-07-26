@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Students", path: "/students" },
     { name: "Faculty", path: "/faculty" },
-    { name: "About", path: "/about" },
+
   ];
 
   // ✅ Hide Navbar on Faculty & About pages
