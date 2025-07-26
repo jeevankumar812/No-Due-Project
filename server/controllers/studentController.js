@@ -38,7 +38,15 @@ exports.uploadAssignment = [
     const student = await Student.findOne({ usn });
     if (!student) return res.status(404).json({ message: "Student not found" });
 
-    student.assignments.push({ subject, file: req.file.filename });
+    // ✅ Check if subject already exists → replace the file
+    const existing = student.assignments.find((a) => a.subject === subject);
+    if (existing) {
+      existing.file = req.file.filename;
+      existing.approved = false; // reset approval if re-uploaded
+    } else {
+      student.assignments.push({ subject, file: req.file.filename });
+    }
+
     await student.save();
     res.json({ message: "Uploaded successfully", student });
   },
@@ -50,15 +58,29 @@ exports.checkAndGenerateCertificate = async (req, res) => {
   const student = await Student.findOne({ usn });
   if (!student) return res.status(404).json({ message: "Student not found" });
 
-  const allApproved = student.assignments.length === 6 &&
+  const allApproved =
+    student.assignments.length === 6 &&
     student.assignments.every((a) => a.approved);
 
-  if (allApproved && !student.certificateIssued) {
+  if (allApproved) {
     const pdfPath = await generateCertificate(student.name, student.usn);
     student.certificateIssued = true;
     await student.save();
     return res.json({ message: "Certificate Generated", pdf: pdfPath });
   }
 
-  res.json({ message: "Not all subjects approved yet" });
+  res.status(400).json({ message: "Not all subjects approved yet" });
+};
+
+// ✅ NEW: Get Student Status (to show uploaded/approved)
+exports.getStudentStatus = async (req, res) => {
+  try {
+    const { usn } = req.params;
+    const student = await Student.findOne({ usn });
+    if (!student) return res.status(404).json({ message: "Student not found" });
+
+    res.json({ assignments: student.assignments });
+  } catch (err) {
+    res.status(500).json({ message: "Error fetching status" });
+  }
 };

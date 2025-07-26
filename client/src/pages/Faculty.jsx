@@ -10,7 +10,6 @@ const Faculty = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simple validation for demo
     if (password === "1234") {
       setFaculty({ subject });
       navigate("/faculty/dashboard");
@@ -31,12 +30,12 @@ const Faculty = () => {
             required
           >
             <option value="">Select Subject</option>
-            <option>Mathematics</option>
-            <option>Physics</option>
-            <option>Chemistry</option>
-            <option>ComputerScience</option>
-            <option>English</option>
-            <option>Electronics</option>
+            <option>Operating Systems</option>
+            <option>Database Management System</option>
+            <option>Computer Networks</option>
+            <option>Cloud Computing</option>
+            <option>Machine Learning</option>
+            <option>Advanced Java</option>
           </select>
           <input
             type="password"
