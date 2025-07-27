@@ -34,4 +34,28 @@ This project ensures:
 
 ## **📂 Project Structure**  
 
-### **Client (Frontend)**  
+```bash
+NoDueManagementSystem/
+├── client/                       # React frontend application
+│   ├── src/
+│   │   ├── pages/                 # All React pages (Student, Faculty, Dashboard, etc.)
+│   │   ├── components/            # Reusable UI components (Navbar, Buttons, etc.)
+│   │   ├── services/              # API request handlers (Axios calls)
+│   │   ├── context/               # React Context API (AuthContext for student & faculty)
+│   │   └── assets/screenshots/    # Project screenshots for documentation
+│   └── public/                    # Static files (logo, background images, favicon)
+│
+├── server/                        # Node.js + Express backend
+│   ├── models/                    # Mongoose schema models (Student, Faculty)
+│   ├── routes/                    # API routes (students.js, faculty.js)
+│   ├── controllers/               # Business logic & API handlers
+│   ├── middleware/                # Auth middleware & file upload (Multer)
+│   ├── uploads/                   # Stores uploaded assignment PDFs & generated certificates
+│   ├── utils/                     # Helper functions (e.g., generateCertificate.js)
+│   └── config/                    # Database & environment configurations
+│
+├── .env                           # Environment variables (Mongo URI, JWT secret, etc.)
+├── package.json                   # Project metadata & dependencies for both client & server
+├── README.md                      # Project documentation (this file)
+└── LICENSE                        # License file (optional)
+```
