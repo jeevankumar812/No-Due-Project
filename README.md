@@ -114,3 +114,7 @@ NoDueManagementSystem/
 
 ---
 
+### 📜 **No Due Certificate**  
+
+[📄 **Click here to view the No Due Certificate (PDF)**](./client/src/assets/certi.pdf)
+
