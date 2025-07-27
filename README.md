@@ -63,4 +63,8 @@ NoDueManagementSystem/
 
 ### 🏠 Home Page
 <img src="./client/src/assets/1.png" alt="Home Page" width="700"/>
-<p align="left"><i>Home Pae of No Due System.</i></p>
+<p align="left"><i>Home Page of No Due System.</i></p>
+
+### Student Registration and Login
+<img src="./client/src/assets/2.png" alt="Home Page" width="700"/>
+<p align="left"><i>Registration and Login of Student using Name Usn and Password</i></p>
