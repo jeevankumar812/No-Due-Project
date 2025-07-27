@@ -59,3 +59,8 @@ NoDueManagementSystem/
 ├── README.md                      # Project documentation (this file)
 └── LICENSE                        # License file (optional)
 ```
+## 🖼️ Results
+
+### 🏠 Home Page
+<img src="./client/src/assets/1.png" alt="Home Page" width="700"/>
+<p align="left"><i>Home Pae of No Due System.</i></p>
