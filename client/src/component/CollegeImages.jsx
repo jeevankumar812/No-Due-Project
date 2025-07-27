@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const CollegeImages = () => {
   const images = [
     { src: "/clg1.jpeg", title: "Main Campus", desc: "The heart of our college life" },
-    { src: "/clg2.jpeg", title: "Library", desc: "A hub for learning and innovation" },
-    { src: "/clg3.jpeg", title: "Sports Complex", desc: "Fitness & fun activities for students" },
+    { src: "/lib.jpg", title: "Library", desc: "A hub for learning and innovation" },
+    { src: "/sport.jpg", title: "Sports Complex", desc: "Fitness & fun activities for students" },
   ];
 
   return (
