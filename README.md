@@ -103,17 +103,14 @@ NoDueManagementSystem/
 ---
 
 ### 🗂️ **Faculty Approval Dashboard**  
-<img src="./client/src/assets/6.png" alt="Faculty Approval" width="700"/>  
+<img src="./client/src/assets/7.png" alt="Faculty Approval" width="700"/>  
 <p align="left">📄 <i>Faculty reviews and <b>approves assignments</b> based on uploaded PDFs.</i></p>  
 
 ---
 
 ### 🏆 **No Due Certificate Generated**  
-<img src="./client/src/assets/7.png" alt="Certificate" width="700"/>  
+<img src="./client/src/assets/8.png" alt="Certificate" width="700"/>  
 <p align="left">🎉 <i>Once all approvals are done, students can <b>generate their official No Due Certificate</b> in PDF format.</i></p>  
 
 ---
 
-### 📜 **Sample No Due Certificate**  
-<img src="./client/src/assets/8.png" alt="No Due Certificate" width="700"/>  
-<p align="left">🖋️ <i>Beautifully formatted <b>No Due Certificate</b> with student details and approved subjects.</i></p>  
