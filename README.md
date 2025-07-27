@@ -1,7 +1,7 @@
 # ✅ No Due Management System
 
 ### 👨‍🎓 **Project By:**  
-**K. Jeevan Kumar**  
+**K Jeevan Kumar**  
 🎓 **Final Year, Computer Science & Engineering**  
 🏫 **Alva's Institute of Engineering & Technology**  
 🆔 **USN: 4AL22CS067**
