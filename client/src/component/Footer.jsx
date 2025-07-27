@@ -24,10 +24,10 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-lg font-semibold text-white mb-3">Contact</h4>
+          <h4 className="text-lg font-semibold text-white mb-3">Project By k Jeevan Kumar</h4>
           <p className="text-sm">📍 Alva's Engineering College</p>
-          <p className="text-sm">📧 support@college.com</p>
-          <p className="text-sm">📞 +91 98765 43210</p>
+          <p className="text-sm">📧 jeevanjeevan63643@gmail.com</p>
+          <p className="text-sm">📞 +91 8904483844</p>
         </div>
       </div>
 
