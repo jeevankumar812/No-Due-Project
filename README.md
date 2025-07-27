@@ -1,4 +1,4 @@
-# ✅ **No Due System**  
+## No Due System 
 
 ### **👨‍🎓 Project By:**  
 **K Jeevan Kumar**  
@@ -115,6 +115,8 @@ NoDueManagementSystem/
 ---
 
 ### 📜 **No Due Certificate**  
+<img src="./client/src/assets/cer.png" alt="Certificates" width="700"/>  
+<p align="left">🎉 <i>No Due Certificate </i></p>  
 
-[📄 **Click here to view the No Due Certificate (PDF)**](./client/src/assets/cer.pdf)
+
 
