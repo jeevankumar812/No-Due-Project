@@ -138,7 +138,7 @@ const Faculty = () => {
             </div>
           </div>
           <h2 className="text-2xl font-bold text-slate-800 mb-2">
-            Faculty Access Portal
+            Faculty Login
           </h2>
           <p className="text-slate-600 text-sm">
             Secure authentication for authorized personnel
@@ -179,7 +179,7 @@ const Faculty = () => {
                 <option value="Computer Networks">Computer Networks</option>
                 <option value="Cloud Computing">Cloud Computing</option>
                 <option value="Machine Learning">Machine Learning</option>
-                <option value="Advanced Java">Advanced Java Programming</option>
+                <option value="Advanced Java">Advanced Java </option>
               </select>
               <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                 <svg
