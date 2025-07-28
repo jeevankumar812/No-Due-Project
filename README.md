@@ -1,4 +1,4 @@
-# ✅ No Due Management System
+#  No Due Management System
 
 ### 👨‍🎓 **Project By:**  
 **K Jeevan Kumar**  
